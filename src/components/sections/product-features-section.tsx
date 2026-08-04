@@ -5,8 +5,10 @@ import {
   DataIcon,
   FinanceIcon,
   HseIcon,
+  MultilingualIcon,
   ProcurementIcon,
   ProjectManagementIcon,
+  WorkflowIcon,
 } from '@/components/feature-timeline-icons'
 import { ScrollReveal } from '@/components/scroll-reveal'
 import type { ComponentType } from 'react'
@@ -51,6 +53,20 @@ const features: {
       'Store and organise project files and records with consistent version control and data integrity.',
     Icon: DataIcon,
     iconClassName: 'h-[31px] w-[29px]',
+  },
+  {
+    title: 'Multilingual Support',
+    description:
+      'Seamless localisation across global teams and multicultural project sites.',
+    Icon: MultilingualIcon,
+    iconClassName: 'h-[34px] w-[34px]',
+  },
+  {
+    title: 'Dynamic Workflow Engine',
+    description:
+      'Replace rigid processes with custom approval chains tailored to your project hierarchy.',
+    Icon: WorkflowIcon,
+    iconClassName: 'h-[34px] w-[34px]',
   },
 ]
 

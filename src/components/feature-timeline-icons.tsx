@@ -103,3 +103,65 @@ export function DataIcon({ className }: IconProps) {
     </svg>
   )
 }
+
+export function MultilingualIcon({ className }: IconProps) {
+  return (
+    <svg
+      className={className}
+      viewBox="0 0 34 34"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      aria-hidden
+    >
+      <path
+        fillRule="evenodd"
+        clipRule="evenodd"
+        d="M1.6 25.2 8.7 4.8h3.15L18.95 25.2h-3.05l-1.8-5.35H6.45L4.65 25.2H1.6zm5.55-7.75h6.05L11.4 9.2h-.25L7.15 17.45z"
+        fill="currentColor"
+      />
+      <path d="M2 28h14.2v2.45H2V28z" fill="currentColor" />
+      <path d="M19.2 5.4h12.6v2.45h-4.85v3.45h6.3v2.45H16.75v-2.45h6.3V7.85H19.2V5.4z" fill="currentColor" />
+      <path
+        fillRule="evenodd"
+        clipRule="evenodd"
+        d="M19.9 16.4h10.7v2.45h-3.4l3.6 9.55h-2.95l-2.65-7.05h-.2l-2.65 7.05h-2.95l3.6-9.55h-3.5V16.4zm3.85 2.45h3.05l-1.5 4h-.05l-1.5-4z"
+        fill="currentColor"
+      />
+    </svg>
+  )
+}
+
+export function WorkflowIcon({ className }: IconProps) {
+  return (
+    <svg
+      className={className}
+      viewBox="0 0 34 34"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      aria-hidden
+    >
+      <path
+        fillRule="evenodd"
+        clipRule="evenodd"
+        d="M17 .8a6.1 6.1 0 1 1 0 12.2A6.1 6.1 0 0 1 17 .8zm0 2.55a3.55 3.55 0 1 0 0 7.1 3.55 3.55 0 0 0 0-7.1z"
+        fill="currentColor"
+      />
+      <path d="M15.7 12.5h2.6v3.35h-2.6V12.5z" fill="currentColor" />
+      <path d="M7.1 15.85h19.8v2.55H7.1v-2.55z" fill="currentColor" />
+      <path d="M5.85 18h2.6v3.2h-2.6V18z" fill="currentColor" />
+      <path d="M25.55 18h2.6v3.2h-2.6V18z" fill="currentColor" />
+      <path
+        fillRule="evenodd"
+        clipRule="evenodd"
+        d="M7.15 20.6a6.1 6.1 0 1 1 0 12.2 6.1 6.1 0 0 1 0-12.2zm0 2.55a3.55 3.55 0 1 0 0 7.1 3.55 3.55 0 0 0 0-7.1z"
+        fill="currentColor"
+      />
+      <path
+        fillRule="evenodd"
+        clipRule="evenodd"
+        d="M26.85 20.6a6.1 6.1 0 1 1 0 12.2 6.1 6.1 0 0 1 0-12.2zm0 2.55a3.55 3.55 0 1 0 0 7.1 3.55 3.55 0 0 0 0-7.1z"
+        fill="currentColor"
+      />
+    </svg>
+  )
+}
