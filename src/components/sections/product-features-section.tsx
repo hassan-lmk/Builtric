@@ -70,23 +70,6 @@ const features: {
   },
 ]
 
-function FeatureTimeline() {
-  return (
-    <div className="flex shrink-0 flex-col items-center self-stretch py-1">
-      {features.map((feature, index) => (
-        <div key={feature.title} className="flex flex-1 flex-col items-center">
-          <div className="flex h-[68px] w-[68px] shrink-0 items-center justify-center rounded-[46px] bg-hero-yellow text-primary-black">
-            <feature.Icon className={feature.iconClassName} />
-          </div>
-          {index < features.length - 1 ? (
-            <div className="w-1 flex-1 bg-hero-yellow" />
-          ) : null}
-        </div>
-      ))}
-    </div>
-  )
-}
-
 export function ProductFeaturesSection() {
   return (
     <ScrollReveal as="section" className="w-full px-site py-[84px]">
@@ -110,11 +93,20 @@ export function ProductFeaturesSection() {
           </BuiltricButtonGroup>
         </ScrollReveal>
 
-        <ScrollReveal delay={160} className="flex w-full shrink-0 flex-row items-start gap-2.5 lg:w-auto">
-          <FeatureTimeline />
-          <div className="flex max-w-[329px] flex-col gap-11">
-            {features.map((feature) => (
-              <article key={feature.title} className="flex flex-col gap-0.5">
+        <ScrollReveal delay={160} className="relative flex w-full shrink-0 flex-col lg:w-auto">
+          <div className="pointer-events-none absolute left-[34px] top-[68px] bottom-[34px] w-1 -translate-x-1/2 bg-hero-yellow" />
+          {features.map((feature, index) => (
+            <div
+              key={feature.title}
+              className={`flex items-stretch gap-2.5 ${index < features.length - 1 ? 'pb-11' : ''}`}
+            >
+              <div className="relative flex w-[68px] shrink-0 flex-col items-center self-stretch">
+                <div className="flex h-[68px] w-[68px] shrink-0 items-center justify-center rounded-[46px] bg-hero-yellow text-primary-black">
+                  <feature.Icon className={feature.iconClassName} />
+                </div>
+              </div>
+
+              <article className="flex max-w-[420px] flex-col gap-0.5 pt-2">
                 <h3 className="t-title text-primary-black">
                   {feature.title}
                 </h3>
@@ -122,8 +114,8 @@ export function ProductFeaturesSection() {
                   {feature.description}
                 </p>
               </article>
-            ))}
-          </div>
+            </div>
+          ))}
         </ScrollReveal>
       </div>
     </ScrollReveal>
