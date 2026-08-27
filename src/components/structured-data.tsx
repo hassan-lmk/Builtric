@@ -39,3 +39,42 @@ export function OrganizationStructuredData() {
     </>
   )
 }
+
+export function ArticleStructuredData({
+  title,
+  description,
+  slug,
+  publishedAt,
+  image,
+}: {
+  title: string
+  description: string
+  slug: string
+  publishedAt: string
+  image: string
+}) {
+  return (
+    <JsonLd
+      data={{
+        '@context': 'https://schema.org',
+        '@type': 'Article',
+        headline: title,
+        description,
+        image: `${SITE_URL}${image}`,
+        datePublished: publishedAt,
+        dateModified: publishedAt,
+        url: `${SITE_URL}/builtric-blog/${slug}`,
+        author: {
+          '@type': 'Organization',
+          name: SITE_NAME,
+          url: SITE_URL,
+        },
+        publisher: {
+          '@type': 'Organization',
+          name: SITE_NAME,
+          url: SITE_URL,
+        },
+      }}
+    />
+  )
+}

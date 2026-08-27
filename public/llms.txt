@@ -22,6 +22,12 @@ Builtric serves contractors, project managers, developers, and consultants with 
 - [Custom Quote](https://builtric.com/builtric-custom-quote): Request a tailored quote based on team size, workflows, and integrations
 - [Contact](https://builtric.com/builtric-contact): Talk to the Builtric team about pricing, implementation, or partnerships
 
+## Blog
+
+- [Builtric Blog](https://builtric.com/builtric-blog): Construction intelligence insights and product perspective
+- [Safety Shouldn't Be the Slowest System on Your Job Site](https://builtric.com/builtric-blog/safety-shouldnt-be-the-slowest-system-on-your-job-site): Why HSE data lag is a project risk — and how connected inspections and workflows speed response
+- [The Real Cost of Disconnected Data on a Construction Project](https://builtric.com/builtric-blog/the-real-cost-of-disconnected-data-on-a-construction-project): Why fragmented construction data becomes a margin and schedule problem
+
 ## Optional
 
 - [Privacy Policy & Terms](https://builtric.com/builtric-legal): Privacy policy and terms of service

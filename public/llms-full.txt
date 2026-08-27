@@ -59,6 +59,13 @@ Full feature overview: https://builtric.com/builtric-features
 
 About page: https://builtric.com/builtric-about
 
+## Blog articles
+
+- [Safety Shouldn't Be the Slowest System on Your Job Site](https://builtric.com/builtric-blog/safety-shouldnt-be-the-slowest-system-on-your-job-site): Treating HSE as project data with instant inspections, custom approval routing, and real-time visibility
+- [The Real Cost of Disconnected Data on a Construction Project](https://builtric.com/builtric-blog/the-real-cost-of-disconnected-data-on-a-construction-project): Why siloed procurement, finance, inspection, and HSE data drives overruns — and how Builtric creates one source of truth
+
+Blog index: https://builtric.com/builtric-blog
+
 ## Actions
 
 | Intent | URL |

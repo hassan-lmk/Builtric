@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { getBlogPost } from '@/data/blog'
 
 export const SITE_URL = 'https://builtric.com'
 export const SITE_NAME = 'Builtric'
@@ -16,12 +17,22 @@ type PageMetaInput = {
   title: string
   description: string
   path: string
+  openGraphType?: 'website' | 'article'
+  image?: string
+  imageAlt?: string
+  imageWidth?: number
+  imageHeight?: number
 }
 
 export function pageMetadata({
   title,
   description,
   path,
+  openGraphType = 'website',
+  image = DEFAULT_OG_IMAGE,
+  imageAlt = `${SITE_NAME} construction management software`,
+  imageWidth = 1200,
+  imageHeight = 630,
 }: PageMetaInput): Metadata {
   const canonicalPath = path.startsWith('/') ? path : `/${path}`
 
@@ -38,13 +49,13 @@ export function pageMetadata({
       description,
       url: canonicalPath,
       siteName: SITE_NAME,
-      type: 'website',
+      type: openGraphType,
       images: [
         {
-          url: DEFAULT_OG_IMAGE,
-          width: 1200,
-          height: 630,
-          alt: `${SITE_NAME} construction management software`,
+          url: image,
+          width: imageWidth,
+          height: imageHeight,
+          alt: imageAlt,
         },
       ],
     },
@@ -52,7 +63,7 @@ export function pageMetadata({
       card: 'summary_large_image',
       title,
       description,
-      images: [DEFAULT_OG_IMAGE],
+      images: [image],
     },
   }
 }
@@ -63,6 +74,12 @@ export const pageSeo = {
     description:
       'Learn how Builtric helps construction teams unify project data, improve decisions, and deliver projects with greater transparency and control.',
     path: '/builtric-about',
+  }),
+  blog: pageMetadata({
+    title: 'Builtric Blog — Construction Intelligence Insights',
+    description:
+      'Read Builtric insights on construction data, project visibility, procurement, finance, and the real cost of disconnected project systems.',
+    path: '/builtric-blog',
   }),
   contact: pageMetadata({
     title: 'Contact Builtric — Talk to Our Team',
@@ -108,9 +125,29 @@ export const pageSeo = {
   }),
 } as const
 
+export function blogArticleMetadata(slug: string): Metadata {
+  const post = getBlogPost(slug)
+
+  if (!post) {
+    return pageSeo.blog
+  }
+
+  return pageMetadata({
+    title: post.title,
+    description: post.excerpt,
+    path: `/builtric-blog/${slug}`,
+    openGraphType: 'article',
+    image: post.image.src,
+    imageAlt: post.image.alt,
+    imageWidth: post.image.width,
+    imageHeight: post.image.height,
+  })
+}
+
 export const staticRoutes = [
   '/',
   '/builtric-about',
+  '/builtric-blog',
   '/builtric-contact',
   '/builtric-custom-quote',
   '/builtric-demo',

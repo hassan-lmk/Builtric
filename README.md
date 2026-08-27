@@ -22,6 +22,8 @@ Marketing site cloned from [builtric.com](https://builtric.com) using Framer-exp
 | `/builtric-demo` | Book a demo |
 | `/builtric-custom-quote` | Custom quote |
 | `/builtric-legal` | Privacy & Terms |
+| `/builtric-blog` | Blog listing |
+| `/builtric-blog/[slug]` | Blog article |
 
 ## Development
 
