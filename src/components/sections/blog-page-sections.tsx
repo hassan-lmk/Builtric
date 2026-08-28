@@ -8,7 +8,6 @@ import { blogPosts, type BlogPost } from '@/data/blog'
 
 function formatPublishedDate(value: string) {
   return new Intl.DateTimeFormat('en-GB', {
-    day: 'numeric',
     month: 'long',
     year: 'numeric',
   }).format(new Date(`${value}T00:00:00`))

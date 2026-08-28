@@ -22,7 +22,7 @@ export const blogPosts: BlogPost[] = [
     title: "Safety Shouldn't Be the Slowest System on Your Job Site",
     excerpt:
       'On most construction projects, HSE data still moves at the pace of paper — the real risk is the lag between finding an issue and someone with authority seeing it.',
-    publishedAt: '2026-08-27',
+    publishedAt: '2026-08-01',
     image: {
       src: '/images/blog/safety-slowest-system-job-site.webp',
       alt: 'Construction worker reviewing a live project dashboard on a tablet at a job site at dusk',
@@ -78,7 +78,7 @@ export const blogPosts: BlogPost[] = [
     title: 'The Real Cost of Disconnected Data on a Construction Project',
     excerpt:
       'Fragmented construction data rarely looks like a crisis until it becomes one — cost overruns and schedule slippage often start as siloed records across procurement, finance, inspections, and HSE.',
-    publishedAt: '2026-08-27',
+    publishedAt: '2026-07-01',
     image: {
       src: '/images/blog/disconnected-data-construction.webp',
       alt: 'Isometric illustration of a connected smart city with a glowing central data hub representing unified construction project intelligence',
